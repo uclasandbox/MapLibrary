@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Tile Test</title>
+	<meta charset="utf-8" />
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+</head>
+<body>
+	<div id="map" style="height:800px"></div>
+
+	<script>
+		var map = L.map('map').setView([33.987402999535725, -118.30293776904296], 12);
+
+		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			id: 'examples.map-i875mjb7'
+		}).addTo(map);
+		L.tileLayer('http://tiles.ats.ucla.edu/tiles/Los_Angeles_1965_McCone/{z}/{x}/{y}.png', {
+		}).addTo(map);
+	</script>
+</body>
+</html>
